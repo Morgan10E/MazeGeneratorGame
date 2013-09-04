@@ -23,6 +23,7 @@
 		C4E0609817CC875200816762 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4E0608017CC875200816762 /* UIKit.framework */; };
 		C4E060A017CC875200816762 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C4E0609E17CC875200816762 /* InfoPlist.strings */; };
 		C4E060A217CC875200816762 /* MazeGeneratorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E060A117CC875200816762 /* MazeGeneratorTests.m */; };
+		C4E29CBB17D705EA00901344 /* MTPriorityQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E29CBA17D705EA00901344 /* MTPriorityQueue.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +61,8 @@
 		C4E0609D17CC875200816762 /* MazeGeneratorTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MazeGeneratorTests-Info.plist"; sourceTree = "<group>"; };
 		C4E0609F17CC875200816762 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		C4E060A117CC875200816762 /* MazeGeneratorTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MazeGeneratorTests.m; sourceTree = "<group>"; };
+		C4E29CB917D705EA00901344 /* MTPriorityQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTPriorityQueue.h; sourceTree = "<group>"; };
+		C4E29CBA17D705EA00901344 /* MTPriorityQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTPriorityQueue.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,6 +132,8 @@
 				C40B0A3D17CDC1AB00E3E271 /* MTEdge.m */,
 				C40B0A3917CDB23000E3E271 /* MTCluster.h */,
 				C40B0A3A17CDB23000E3E271 /* MTCluster.m */,
+				C4E29CB917D705EA00901344 /* MTPriorityQueue.h */,
+				C4E29CBA17D705EA00901344 /* MTPriorityQueue.m */,
 				C4E0608E17CC875200816762 /* Images.xcassets */,
 				C4E0608317CC875200816762 /* Supporting Files */,
 			);
@@ -263,6 +268,7 @@
 				C4E0608917CC875200816762 /* main.m in Sources */,
 				C40B0A3E17CDC1AB00E3E271 /* MTEdge.m in Sources */,
 				C4E0608D17CC875200816762 /* MTAppDelegate.m in Sources */,
+				C4E29CBB17D705EA00901344 /* MTPriorityQueue.m in Sources */,
 				C40B0A3817CDAE4500E3E271 /* MTNode.m in Sources */,
 				C40B0A3517CDAC9A00E3E271 /* MTMazeViewController.m in Sources */,
 				C40B0A3B17CDB23000E3E271 /* MTCluster.m in Sources */,
