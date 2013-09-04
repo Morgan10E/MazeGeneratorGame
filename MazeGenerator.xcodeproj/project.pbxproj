@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C40B0A3517CDAC9A00E3E271 /* MTMazeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C40B0A3417CDAC9A00E3E271 /* MTMazeViewController.m */; };
+		C40B0A3817CDAE4500E3E271 /* MTNode.m in Sources */ = {isa = PBXBuildFile; fileRef = C40B0A3717CDAE4500E3E271 /* MTNode.m */; };
+		C40B0A3B17CDB23000E3E271 /* MTCluster.m in Sources */ = {isa = PBXBuildFile; fileRef = C40B0A3A17CDB23000E3E271 /* MTCluster.m */; };
+		C40B0A3E17CDC1AB00E3E271 /* MTEdge.m in Sources */ = {isa = PBXBuildFile; fileRef = C40B0A3D17CDC1AB00E3E271 /* MTEdge.m */; };
 		C4E0607D17CC875200816762 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4E0607C17CC875200816762 /* Foundation.framework */; };
 		C4E0607F17CC875200816762 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4E0607E17CC875200816762 /* CoreGraphics.framework */; };
 		C4E0608117CC875200816762 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4E0608017CC875200816762 /* UIKit.framework */; };
@@ -19,11 +23,6 @@
 		C4E0609817CC875200816762 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4E0608017CC875200816762 /* UIKit.framework */; };
 		C4E060A017CC875200816762 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C4E0609E17CC875200816762 /* InfoPlist.strings */; };
 		C4E060A217CC875200816762 /* MazeGeneratorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E060A117CC875200816762 /* MazeGeneratorTests.m */; };
-		C4E060B717CC888600816762 /* Trailblazer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C4E060AB17CC888600816762 /* Trailblazer.cpp */; };
-		C4E060B817CC888600816762 /* TrailblazerCosts.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C4E060AE17CC888600816762 /* TrailblazerCosts.cpp */; };
-		C4E060B917CC888600816762 /* TrailblazerGraphics.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C4E060B017CC888600816762 /* TrailblazerGraphics.cpp */; };
-		C4E060BA17CC888600816762 /* TrailblazerTypes.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C4E060B317CC888600816762 /* TrailblazerTypes.cpp */; };
-		C4E060BB17CC888600816762 /* WorldGenerator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C4E060B517CC888600816762 /* WorldGenerator.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,6 +36,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C40B0A3317CDAC9A00E3E271 /* MTMazeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTMazeViewController.h; sourceTree = "<group>"; };
+		C40B0A3417CDAC9A00E3E271 /* MTMazeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTMazeViewController.m; sourceTree = "<group>"; };
+		C40B0A3617CDAE4500E3E271 /* MTNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTNode.h; sourceTree = "<group>"; };
+		C40B0A3717CDAE4500E3E271 /* MTNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTNode.m; sourceTree = "<group>"; };
+		C40B0A3917CDB23000E3E271 /* MTCluster.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTCluster.h; sourceTree = "<group>"; };
+		C40B0A3A17CDB23000E3E271 /* MTCluster.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTCluster.m; sourceTree = "<group>"; };
+		C40B0A3C17CDC1AB00E3E271 /* MTEdge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTEdge.h; sourceTree = "<group>"; };
+		C40B0A3D17CDC1AB00E3E271 /* MTEdge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTEdge.m; sourceTree = "<group>"; };
 		C4E0607917CC875200816762 /* MazeGenerator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MazeGenerator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4E0607C17CC875200816762 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		C4E0607E17CC875200816762 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -53,18 +60,6 @@
 		C4E0609D17CC875200816762 /* MazeGeneratorTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MazeGeneratorTests-Info.plist"; sourceTree = "<group>"; };
 		C4E0609F17CC875200816762 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		C4E060A117CC875200816762 /* MazeGeneratorTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MazeGeneratorTests.m; sourceTree = "<group>"; };
-		C4E060AB17CC888600816762 /* Trailblazer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Trailblazer.cpp; sourceTree = "<group>"; };
-		C4E060AC17CC888600816762 /* Trailblazer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Trailblazer.h; sourceTree = "<group>"; };
-		C4E060AD17CC888600816762 /* TrailblazerConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TrailblazerConstants.h; sourceTree = "<group>"; };
-		C4E060AE17CC888600816762 /* TrailblazerCosts.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TrailblazerCosts.cpp; sourceTree = "<group>"; };
-		C4E060AF17CC888600816762 /* TrailblazerCosts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TrailblazerCosts.h; sourceTree = "<group>"; };
-		C4E060B017CC888600816762 /* TrailblazerGraphics.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TrailblazerGraphics.cpp; sourceTree = "<group>"; };
-		C4E060B117CC888600816762 /* TrailblazerGraphics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TrailblazerGraphics.h; sourceTree = "<group>"; };
-		C4E060B217CC888600816762 /* TrailblazerPQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TrailblazerPQueue.h; sourceTree = "<group>"; };
-		C4E060B317CC888600816762 /* TrailblazerTypes.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TrailblazerTypes.cpp; sourceTree = "<group>"; };
-		C4E060B417CC888600816762 /* TrailblazerTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TrailblazerTypes.h; sourceTree = "<group>"; };
-		C4E060B517CC888600816762 /* WorldGenerator.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = WorldGenerator.cpp; sourceTree = "<group>"; };
-		C4E060B617CC888600816762 /* WorldGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WorldGenerator.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,18 +121,14 @@
 			children = (
 				C4E0608B17CC875200816762 /* MTAppDelegate.h */,
 				C4E0608C17CC875200816762 /* MTAppDelegate.m */,
-				C4E060AB17CC888600816762 /* Trailblazer.cpp */,
-				C4E060AC17CC888600816762 /* Trailblazer.h */,
-				C4E060AD17CC888600816762 /* TrailblazerConstants.h */,
-				C4E060AE17CC888600816762 /* TrailblazerCosts.cpp */,
-				C4E060AF17CC888600816762 /* TrailblazerCosts.h */,
-				C4E060B017CC888600816762 /* TrailblazerGraphics.cpp */,
-				C4E060B117CC888600816762 /* TrailblazerGraphics.h */,
-				C4E060B217CC888600816762 /* TrailblazerPQueue.h */,
-				C4E060B317CC888600816762 /* TrailblazerTypes.cpp */,
-				C4E060B417CC888600816762 /* TrailblazerTypes.h */,
-				C4E060B517CC888600816762 /* WorldGenerator.cpp */,
-				C4E060B617CC888600816762 /* WorldGenerator.h */,
+				C40B0A3317CDAC9A00E3E271 /* MTMazeViewController.h */,
+				C40B0A3417CDAC9A00E3E271 /* MTMazeViewController.m */,
+				C40B0A3617CDAE4500E3E271 /* MTNode.h */,
+				C40B0A3717CDAE4500E3E271 /* MTNode.m */,
+				C40B0A3C17CDC1AB00E3E271 /* MTEdge.h */,
+				C40B0A3D17CDC1AB00E3E271 /* MTEdge.m */,
+				C40B0A3917CDB23000E3E271 /* MTCluster.h */,
+				C40B0A3A17CDB23000E3E271 /* MTCluster.m */,
 				C4E0608E17CC875200816762 /* Images.xcassets */,
 				C4E0608317CC875200816762 /* Supporting Files */,
 			);
@@ -269,13 +260,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C4E060BA17CC888600816762 /* TrailblazerTypes.cpp in Sources */,
 				C4E0608917CC875200816762 /* main.m in Sources */,
-				C4E060B817CC888600816762 /* TrailblazerCosts.cpp in Sources */,
-				C4E060B917CC888600816762 /* TrailblazerGraphics.cpp in Sources */,
+				C40B0A3E17CDC1AB00E3E271 /* MTEdge.m in Sources */,
 				C4E0608D17CC875200816762 /* MTAppDelegate.m in Sources */,
-				C4E060B717CC888600816762 /* Trailblazer.cpp in Sources */,
-				C4E060BB17CC888600816762 /* WorldGenerator.cpp in Sources */,
+				C40B0A3817CDAE4500E3E271 /* MTNode.m in Sources */,
+				C40B0A3517CDAC9A00E3E271 /* MTMazeViewController.m in Sources */,
+				C40B0A3B17CDB23000E3E271 /* MTCluster.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -393,6 +383,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MazeGenerator/MazeGenerator-Prefix.pch";
 				INFOPLIST_FILE = "MazeGenerator/MazeGenerator-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -406,6 +397,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MazeGenerator/MazeGenerator-Prefix.pch";
 				INFOPLIST_FILE = "MazeGenerator/MazeGenerator-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -470,6 +462,7 @@
 				C4E060A717CC875200816762 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C4E060A817CC875200816762 /* Build configuration list for PBXNativeTarget "MazeGeneratorTests" */ = {
 			isa = XCConfigurationList;
@@ -478,6 +471,7 @@
 				C4E060AA17CC875200816762 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

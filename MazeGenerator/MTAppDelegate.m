@@ -7,6 +7,7 @@
 //
 
 #import "MTAppDelegate.h"
+#import "MTMazeViewController.h"
 
 @implementation MTAppDelegate
 
@@ -15,6 +16,11 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
+    
+    MTMazeViewController *mvc = [[MTMazeViewController alloc] init];
+    
+    [[self window] setRootViewController:mvc];
+    
     [self.window makeKeyAndVisible];
     return YES;
 }
