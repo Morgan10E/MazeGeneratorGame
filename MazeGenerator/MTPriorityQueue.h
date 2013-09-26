@@ -8,12 +8,14 @@
 
 #import <Foundation/Foundation.h>
 
-@interface MTPriorityQueue : NSMutableArray
+@interface MTPriorityQueue : NSObject
 
 - (id) initWithMutableArray:(NSMutableArray *)array;
 
 - (void)createQueueFromMutableArray:(NSMutableArray *)array;
 
 - (id) dequeueMin;
+
+@property (nonatomic, strong) NSMutableArray *queue;
 
 @end

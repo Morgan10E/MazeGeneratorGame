@@ -7,10 +7,11 @@
 //
 
 #import "MTEdge.h"
+#import "MTNode.h"
 
 @implementation MTEdge
 
-- (id) initWithStart:(CGPoint)start andEnd:(CGPoint)end
+- (id) initWithStart:(MTNode*)start andEnd:(MTNode*)end
 {
     self = [super init];
     if (self){
@@ -22,7 +23,12 @@
 
 - (id) init
 {
-    return [self initWithStart:CGPointMake(0, 0) andEnd:CGPointMake(0, 0)];
+    return nil;
+}
+
+- (NSString *)description
+{
+    return [NSString stringWithFormat:@"%@, %@", _start, _end];
 }
 
 @end

@@ -24,6 +24,7 @@
 		C4E060A017CC875200816762 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C4E0609E17CC875200816762 /* InfoPlist.strings */; };
 		C4E060A217CC875200816762 /* MazeGeneratorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E060A117CC875200816762 /* MazeGeneratorTests.m */; };
 		C4E29CBB17D705EA00901344 /* MTPriorityQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E29CBA17D705EA00901344 /* MTPriorityQueue.m */; };
+		C4F8165717D8499A00707415 /* MTMazeView.m in Sources */ = {isa = PBXBuildFile; fileRef = C4F8165617D8499A00707415 /* MTMazeView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +64,8 @@
 		C4E060A117CC875200816762 /* MazeGeneratorTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MazeGeneratorTests.m; sourceTree = "<group>"; };
 		C4E29CB917D705EA00901344 /* MTPriorityQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTPriorityQueue.h; sourceTree = "<group>"; };
 		C4E29CBA17D705EA00901344 /* MTPriorityQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTPriorityQueue.m; sourceTree = "<group>"; };
+		C4F8165517D8499A00707415 /* MTMazeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTMazeView.h; sourceTree = "<group>"; };
+		C4F8165617D8499A00707415 /* MTMazeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTMazeView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +129,8 @@
 				C4E0608C17CC875200816762 /* MTAppDelegate.m */,
 				C40B0A3317CDAC9A00E3E271 /* MTMazeViewController.h */,
 				C40B0A3417CDAC9A00E3E271 /* MTMazeViewController.m */,
+				C4F8165517D8499A00707415 /* MTMazeView.h */,
+				C4F8165617D8499A00707415 /* MTMazeView.m */,
 				C40B0A3617CDAE4500E3E271 /* MTNode.h */,
 				C40B0A3717CDAE4500E3E271 /* MTNode.m */,
 				C40B0A3C17CDC1AB00E3E271 /* MTEdge.h */,
@@ -217,6 +222,9 @@
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = "Morgan Tenney";
 				TargetAttributes = {
+					C4E0607817CC875200816762 = {
+						DevelopmentTeam = 8AGFA8RHB7;
+					};
 					C4E0609317CC875200816762 = {
 						TestTargetID = C4E0607817CC875200816762;
 					};
@@ -265,6 +273,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C4F8165717D8499A00707415 /* MTMazeView.m in Sources */,
 				C4E0608917CC875200816762 /* main.m in Sources */,
 				C40B0A3E17CDC1AB00E3E271 /* MTEdge.m in Sources */,
 				C4E0608D17CC875200816762 /* MTAppDelegate.m in Sources */,
@@ -386,11 +395,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MazeGenerator/MazeGenerator-Prefix.pch";
 				INFOPLIST_FILE = "MazeGenerator/MazeGenerator-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -400,11 +412,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MazeGenerator/MazeGenerator-Prefix.pch";
 				INFOPLIST_FILE = "MazeGenerator/MazeGenerator-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

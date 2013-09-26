@@ -12,6 +12,8 @@
 
 - (id) initWithLocation:(CGPoint)loc;// andParent:(MTNode*)parent andDistance:(double)distance andColor:(UIColor *)color;
 
+- (BOOL) isContainedIn:(NSSet*)cluster;
+
 @property (nonatomic) CGPoint location;
 
 @end

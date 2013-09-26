@@ -11,6 +11,7 @@
 #import "MTNode.h"
 #import "MTPriorityQueue.h"
 #import "MTEdge.h"
+#import "MTMazeView.h"
 
 @interface MTMazeViewController ()
 
@@ -25,6 +26,14 @@
         // Custom initialization
     }
     return self;
+}
+
+- (void)loadView
+{
+    int screenWidth = [[UIScreen mainScreen] bounds].size.width;
+    int screenHeight = [[UIScreen mainScreen] bounds].size.height;
+    NSSet *maze = [self createMazeWithRows:6 andColumns:9];
+    [self setView:[[MTMazeView alloc] initWithFrame:CGRectMake(0, 0, screenWidth, screenHeight) andMaze:maze andController: self]];
 }
 
 - (void)viewDidLoad
@@ -50,18 +59,22 @@
     
     //Place each node in its own cluster and insert all edges into
     //the priority queue
-    for (int r = 0; r < numRows; r++){
-        for (int c = 0; c < numColumns; c++){
-            MTCluster *cluster = [[MTCluster alloc] initWithArray:@[[[MTNode alloc] initWithLocation: CGPointMake(r, c)]]];
+    for (int r = 0; r < numRows+1; r++){
+        for (int c = 0; c < numColumns+1; c++){
+            NSMutableSet *cluster = [[NSMutableSet alloc] initWithObjects:[[MTNode alloc] initWithLocation: CGPointMake(r, c)], nil];
             [clusters addObject:cluster];
             
             //if statements ensure all edges in bounds
-            if (!(r == numRows-1)){
-                MTEdge *edge = [[MTEdge alloc] initWithStart:CGPointMake(r, c) andEnd:CGPointMake(r+1, c)];
+            if (!(r == numRows)){
+                MTNode *start = [[MTNode alloc] initWithLocation:CGPointMake(r, c)];
+                MTNode *end = [[MTNode alloc] initWithLocation:CGPointMake(r+1, c)];
+                MTEdge *edge = [[MTEdge alloc] initWithStart:start andEnd:end];
                 [edgeArray addObject:edge];
             }
-            if (!(c== numColumns-1)){
-                MTEdge *edge = [[MTEdge alloc] initWithStart:CGPointMake(r, c) andEnd:CGPointMake(r, c+1)];
+            if (!(c== numColumns)){
+                MTNode *start = [[MTNode alloc] initWithLocation:CGPointMake(r, c)];
+                MTNode *end = [[MTNode alloc] initWithLocation:CGPointMake(r, c+1)];
+                MTEdge *edge = [[MTEdge alloc] initWithStart:start andEnd:end];
                 [edgeArray addObject:edge];
             }
         }
@@ -72,17 +85,17 @@
     //until there's only one cluster, and thus one tree
     while ([clusters count]>1){
         MTEdge *edge = [edges dequeueMin];
-        MTNode *one = [[MTNode alloc] initWithLocation:edge.start];
-        MTNode *two = [[MTNode alloc] initWithLocation:edge.end];
+        MTNode *one = edge.start;
+        MTNode *two = edge.end;
         
-        MTCluster *oneCluster;
-        MTCluster *twoCluster;
+        NSMutableSet *oneCluster;
+        NSMutableSet *twoCluster;
         
         //finds the clusters the ends of the edge belong to
-        for (MTCluster *cluster in clusters){
-            if ([cluster containsObject:one])
+        for (NSMutableSet *cluster in clusters){
+            if ([one isContainedIn:cluster])
                 oneCluster = cluster;
-            if ([cluster containsObject:two])
+            if ([two isContainedIn:cluster])
                 twoCluster = cluster;
         }
         //ignores the edge if they belong in the same cluster
@@ -95,17 +108,25 @@
         
         //merge clusters
         NSMutableSet *locs = [[NSMutableSet alloc] initWithSet:oneCluster];
-        for (MTCluster *cluster in twoCluster){
+        for (NSMutableSet *cluster in twoCluster){
              [locs addObject:cluster];
         }
-        MTCluster *newCluster = [[MTCluster alloc] initWithSet:locs];;
+        
         //add new merged cluster
-        [clusters addObject:newCluster];
+        [clusters addObject:locs];
         //add edge
         [mazeSet addObject:edge];
     }
     
     return mazeSet;
+}
+
+- (void)createNewMaze
+{
+    int screenWidth = [[UIScreen mainScreen] bounds].size.width;
+    int screenHeight = [[UIScreen mainScreen] bounds].size.height;
+    NSSet *maze = [self createMazeWithRows:6 andColumns:9];
+    [self setView:[[MTMazeView alloc] initWithFrame:CGRectMake(0, 0, screenWidth, screenHeight) andMaze:maze andController: self]];
 }
 
 @end

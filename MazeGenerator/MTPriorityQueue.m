@@ -14,6 +14,7 @@
 {
     self = [super init];
     if (self){
+        _queue = [[NSMutableArray alloc] init];
         [self createQueueFromMutableArray:array];
     }
     return self;
@@ -22,18 +23,18 @@
 - (void)createQueueFromMutableArray:(NSMutableArray *)array
 {
     while ([array count] > 0){
-        int randomIndex = random()*[array count];
-        [self addObject:[array objectAtIndex:randomIndex]];
+        int randomIndex = random()%[array count];
+        [_queue addObject:[array objectAtIndex:randomIndex]];
         [array removeObjectAtIndex:randomIndex];
     }
 }
 
 - (id) dequeueMin
 {
-    if ([self count]==0)
+    if ([_queue count]==0)
         return nil;
-    id object = [self objectAtIndex:0];
-    [self removeObjectAtIndex:0];
+    id object = [_queue objectAtIndex:0];
+    [_queue removeObjectAtIndex:0];
     return object;
 }
 

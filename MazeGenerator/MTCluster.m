@@ -11,6 +11,15 @@
 
 @implementation MTCluster
 
+- (id) initWithCapacity:(NSUInteger)numItems
+{
+    self = [super initWithCapacity:numItems];
+    if (self){
+        
+    }
+    return self;
+}
+
 //- (id) init
 //{
 //    self = [super init];

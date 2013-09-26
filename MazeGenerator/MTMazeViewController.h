@@ -11,5 +11,6 @@
 @interface MTMazeViewController : UIViewController
 
 - (NSSet *) createMazeWithRows:(int)rows andColumns:(int)columns;
+- (void)createNewMaze;
 
 @end

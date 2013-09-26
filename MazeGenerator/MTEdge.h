@@ -8,11 +8,18 @@
 
 #import <Foundation/Foundation.h>
 
+@class MTNode;
+
 @interface MTEdge : NSObject
 
-- (id) initWithStart:(CGPoint)start andEnd:(CGPoint)end;
+- (id) initWithStart:(MTNode*)start andEnd:(MTNode*)end;
 
-@property (nonatomic) CGPoint start;
-@property (nonatomic) CGPoint end;
+//- (id) initWithStart:(CGPoint)start andEnd:(CGPoint)end;
+
+@property (nonatomic, strong) MTNode *start;
+@property (nonatomic, strong) MTNode *end;
+
+//@property (nonatomic) CGPoint start;
+//@property (nonatomic) CGPoint end;
 
 @end
